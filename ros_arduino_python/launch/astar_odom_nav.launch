@@ -102,7 +102,7 @@ sensors: {
 # Cannot use button C because reading it interferes with motor 1 PWM.
 #  button_c:       {pin: 102, type: Digital, rate: 10},
   battery_voltage: {pin: 106, type: Analog, rate: 1},
-  arduino_led:     {pin: 13, type: Digital, rate: 10, direction: output},
+#  arduino_led:     {pin: 13, type: Digital, rate: 10, direction: output},
 }
         </rosparam>
     </node>
