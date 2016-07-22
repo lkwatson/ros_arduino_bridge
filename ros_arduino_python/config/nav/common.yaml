@@ -1,0 +1,14 @@
+# Actual radius is 0.1143m.
+robot_radius: 0.1143
+
+plugins:
+#- {name: static_layer, type: "costmap_2d::StaticLayer"}
+#- {name: obstacles_layer, type: "costmap_2d::ObstacleLayer"}
+- {name: inflater_layer, type: "costmap_2d::InflationLayer"}
+
+#obstacles_layer:
+#  observation_sources: scan
+#  scan: {sensor_frame: base_link, data_type: PointCloud, topic: ir_cloud, marking: true, clearing: true, obstacle_range: 0.75, raytrace_range: 1.0}
+
+inflater_layer:
+  inflation_radius: 0.20
