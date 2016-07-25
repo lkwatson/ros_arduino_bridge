@@ -1,2 +1,3 @@
 *.pyc
+*~
 my_arduino_params.yaml
