@@ -1,0 +1,12 @@
+<launch>
+    <arg name="urdf_file" default="$(find ros_arduino_python)/config/prsg2_description.urdf" />
+    <param name="robot_description" textfile="$(arg urdf_file)" />
+
+    <arg name="map_file" default="$(find ros_arduino_python)/config/map/map_10x10_res0.05.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">
+        <rosparam>
+frame_id: odom
+        </rosparam>
+    </node>
+
+</launch>
