@@ -1,6 +1,7 @@
 <launch>
-    <arg name="urdf_file" default="$(find ros_arduino_python)/config/prsg2_description.urdf" />
-    <param name="robot_description" textfile="$(arg urdf_file)" />
+
+    <arg name="urdf_file" default="$(find ros_arduino_python)/config/prsg2_description.xacro" />
+    <param name="robot_description" command="$(find xacro)/xacro.py $(arg urdf_file)" />
 
     <!-- Publish the robot state -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
@@ -74,4 +75,5 @@ sensors: {
 }
         </rosparam>
     </node>
+
 </launch>
