@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <robot name="prsg2_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:property name="pi" value="3.14159" />
   <xacro:property name="degree" value="${pi / 180}" />
   <xacro:property name="inch" value="0.0254" />
 
@@ -22,7 +23,7 @@
   <xacro:property name="camera_setback" value="0.025" />
 
   <xacro:macro name="material_color" params="r g b a:=1.0">
-    <material>
+    <material name="color_${r}_${g}_${b}_{$a}">
       <color rgba="${r} ${g} ${b} ${a}" />
     </material>
   </xacro:macro>
